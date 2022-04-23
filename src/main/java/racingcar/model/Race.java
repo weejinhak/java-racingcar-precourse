@@ -11,8 +11,12 @@ import java.util.Map;
 public class Race {
 
 	private static final String INPUT_CAR_NAME = "경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)";
-	public static final String FINAL_WINNER = "최종 우승자 : ";
-	private final List<Car> carList = new ArrayList<>();
+	public static final String FINAL_WINNER = "최종 우승자: ";
+	private List<Car> carList = new ArrayList<>();
+
+	public Race() {
+
+	}
 
 	public void inputCarNames() {
 		System.out.println(INPUT_CAR_NAME);
@@ -21,6 +25,10 @@ public class Race {
 		for (String car : carArray) {
 			carList.add(new Car(car));
 		}
+	}
+
+	public Race(List<Car> carList) {
+		this.carList = carList;
 	}
 
 	public void racing() {
