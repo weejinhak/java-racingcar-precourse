@@ -9,6 +9,11 @@ public class RacingGame {
 		race.inputCarNames();
 		String tryCount = Console.readLine();
 		race(race, tryCount);
+		printResult(race);
+	}
+
+	private void printResult(Race race) {
+		race.getWinner();
 	}
 
 	private void race(Race race, String tryCount) {
