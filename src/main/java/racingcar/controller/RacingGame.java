@@ -13,5 +13,8 @@ public class RacingGame {
 
 	private void race(Race race, String tryCount) {
 		int raceCount = Integer.parseInt(tryCount);
+		for (int i = 0; i < raceCount; i++) {
+			race.racing();
+		}
 	}
 }
